@@ -42,26 +42,48 @@
 // console.log(binarySearch(array, 99));
 // console.log(count);
 // 3. Selection sort
+// const arr = [
+//   0, 3, 2, 5, 6, 8, 1, 9, 4, 2, 1, 2, 9, 6, 4, 1, 7, -1, -5, 23, 6, 2, 35, 6, 3,
+//   32,
+// ];
+// let count = 0;
+// function selectionSort(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     let indexMin = i;
+//     for (let j = i + 1; j < array.length; j++) {
+//       if (array[j] < array[indexMin]) {
+//         indexMin = j;
+//       }
+//       count += 1;
+//     }
+//     let tmp = array[i];
+//     array[i] = array[indexMin];
+//     array[indexMin] = tmp;
+//   }
+//   return array;
+// }
+// console.log(selectionSort(arr));
+// console.log(arr.length);
+// console.log(`count: ${count}`);
+// 4. Bubble sort
 const arr = [
   0, 3, 2, 5, 6, 8, 1, 9, 4, 2, 1, 2, 9, 6, 4, 1, 7, -1, -5, 23, 6, 2, 35, 6, 3,
   32,
 ];
 let count = 0;
-function selectionSort(array) {
+function bubbleSort(array) {
   for (let i = 0; i < array.length; i++) {
-    let indexMin = i;
-    for (let j = i + 1; j < array.length; j++) {
-      if (array[j] < array[indexMin]) {
-        indexMin = j;
+    for (let j = 0; j < array.length - 1 - i; j++) {
+      if (array[j + 1] < array[j]) {
+        let tmp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = tmp;
       }
       count += 1;
     }
-    let tmp = array[i];
-    array[i] = array[indexMin];
-    array[indexMin] = tmp;
   }
   return array;
 }
-console.log(selectionSort(arr));
-console.log(arr.length);
+console.log(`lenght: ${arr.length}`);
+console.log(bubbleSort(arr));
 console.log(`count: ${count}`);
