@@ -8,13 +8,13 @@ let arr = [
   "Saturday",
 ];
 
-function getWeek(arr, index) {
-  if (index >= 0 && index < arr.length) {
-    return arr[index];
+function getDay(arr, index) {
+  if (index >= 1 && index < 7) {
+    return arr[index - 1];
   } else {
-    return "Wrong, please enter a number between 0 and 6";
+    return "Wrong, please enter a number between 1 and 7";
   }
 }
 
-console.log(getWeek(arr, 2));
-console.log(getWeek(arr, 7));
+console.log(getDay(arr, 1));
+console.log(getDay(arr, 7));
