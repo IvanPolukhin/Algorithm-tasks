@@ -1,5 +1,6 @@
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 let count = 0;
+
 function binarySearch(arr, item) {
   count += 1;
   let start = 0;
@@ -22,6 +23,7 @@ function binarySearch(arr, item) {
   }
   return position;
 }
+
 console.log(binarySearch(array, 1));
 console.log(binarySearch(array, 8));
 console.log(binarySearch(array, 99));

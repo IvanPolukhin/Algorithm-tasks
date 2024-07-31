@@ -3,6 +3,7 @@ const arr = [
   32,
 ];
 let count = 0;
+
 function selectionSort(array) {
   for (let i = 0; i < array.length; i++) {
     let indexMin = i;
@@ -18,6 +19,7 @@ function selectionSort(array) {
   }
   return array;
 }
+
 console.log(selectionSort(arr));
 console.log(arr.length);
 console.log(`count: ${count}`);

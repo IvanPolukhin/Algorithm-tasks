@@ -3,6 +3,7 @@ const arr = [
   32,
 ];
 let count = 0;
+
 arr.sort((a, b) => a - b);
 function recursiveBinarySearch(array, item, start, end) {
   count++;
@@ -19,5 +20,6 @@ function recursiveBinarySearch(array, item, start, end) {
     return recursiveBinarySearch(array, item, middle + 1, end);
   }
 }
+
 console.log(recursiveBinarySearch(arr, 3, 0, arr.length));
 console.log(`count: ${count}`);

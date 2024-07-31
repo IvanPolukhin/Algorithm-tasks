@@ -3,6 +3,7 @@ const arr = [
   32,
 ];
 let count = 0;
+
 function bubbleSort(array) {
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < array.length - 1 - i; j++) {
@@ -16,6 +17,7 @@ function bubbleSort(array) {
   }
   return array;
 }
+
 console.log(`lenght: ${arr.length}`);
 console.log(bubbleSort(arr));
 console.log(`count: ${count}`);

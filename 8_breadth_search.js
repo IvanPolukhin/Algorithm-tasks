@@ -6,6 +6,7 @@ graph.c = ["d", "e"];
 graph.d = ["f"];
 graph.e = ["f"];
 graph.f = ["g"];
+
 function breadthSearch(graph, start, end) {
   let queue = [];
   queue.push(start);
@@ -22,4 +23,5 @@ function breadthSearch(graph, start, end) {
   }
   return false;
 }
+
 console.log(breadthSearch(graph, "a", "g"));
