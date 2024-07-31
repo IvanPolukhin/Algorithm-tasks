@@ -22,4 +22,4 @@ function breadthSearch(graph, start, end) {
   }
   return false;
 }
-console.log(breadthSearch(graph, "a", "e"));
+console.log(breadthSearch(graph, "a", "g"));
