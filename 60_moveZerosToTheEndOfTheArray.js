@@ -16,3 +16,20 @@ const moveZeroes = (array) => {
 };
 
 console.log(moveZeroes([1, 23, 0, 0, 0, 0, 4, 33, 57, 8]));
+
+const moveZeros2 = (arr) => {
+  const zeroArr = [];
+  const result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
+      zeroArr.push(arr[i]);
+    } else {
+      result.push(arr[i]);
+    }
+  }
+
+  return [...result, ...zeroArr];
+};
+
+console.log(moveZeros2([1, 23, 0, 0, 0, 0, 4, 33, 57, 8]));
