@@ -3,7 +3,7 @@ const k = 2;
 
 const decrypt = (code, k) => {
   const n = code.length;
-  if (k === 0) return new Array(code.length).fill(0);
+  if (k === 0) return new Array(n).fill(0);
 
   const absk = Math.abs(k);
   const diretion = k > 0 ? 1 : -1;
