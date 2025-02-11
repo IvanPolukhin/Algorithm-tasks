@@ -21,7 +21,7 @@ const longestMonotonicSubarray = (nums) => {
   return max;
 };
 
-console.log(longestMonotonicSubarray([1, 2, 3, 4, 5]));
+console.log(longestMonotonicSubarray([1, 2, 3, 4, 5, 10, 6, 7, 8, 9]));
 console.log(longestMonotonicSubarray([5, 4, 3, 2, 1]));
 console.log(longestMonotonicSubarray([1, 3, 2, 1, 4, 5]));
 console.log(longestMonotonicSubarray([1, 2, 2, 3]));
