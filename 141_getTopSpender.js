@@ -8,7 +8,7 @@ const getTopSpender = (order) => {
     let maxSum = -Infinity;
     let topSpenders = "";
 
-    for (const [name, date] in Object.entries(order)) {
+    for (const [name, date] of Object.entries(order)) {
         const total = date.purchases.reduce((sum, price) => sum + price, 0);
 
         if (total > maxSum) {
