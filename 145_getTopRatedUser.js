@@ -18,3 +18,21 @@ const getTopRatedUser = (ratings) => {
 };
 
 console.log(getTopRatedUser(ratings));
+
+// Alternative
+
+const getTopRatedUserAlternative = (ratings) => {
+    let user = "";
+    let maxAvg = 0;
+
+    for (const [name, scores] of Object.entries(ratings)) {
+        const avg =
+            scores.reduce((total, score) => total + score, 0) / scores.length;
+
+        avg > maxAvg ? ((maxAvg = avg), (user = name)) : null;
+    }
+
+    return user;
+};
+
+console.log(getTopRatedUserAlternative(ratings));
