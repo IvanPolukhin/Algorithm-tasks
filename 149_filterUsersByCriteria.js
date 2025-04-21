@@ -12,3 +12,7 @@ const filterUsersByCriteria = (orders) => {
 };
 
 console.log(filterUsersByCriteria(orders));
+// [
+//     { id: 1, status: 'delivered', amount: 150 },
+//     { id: 4, status: 'delivered', amount: 120 }
+// ]

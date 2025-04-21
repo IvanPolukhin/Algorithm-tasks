@@ -9,3 +9,8 @@ const sortByAge = (users) => {
 };
 
 console.log(sortByAge(users));
+// [
+//     { name: 'Bob', age: 22 },
+//     { name: 'Charlie', age: 25 },
+//     { name: 'Alice', age: 30 }
+// ]
