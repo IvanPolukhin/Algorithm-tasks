@@ -15,21 +15,19 @@ const obj2 = {
 const mergeObjects = (obj1, obj2) => {
     const res = {...obj1};
 
-    for (const key in obj2) {
-        if (key in res) {
-            const val1 = res[key];
-            const val2 = obj2[key];
+    const mergeValues = (val1, val2) => {
+        if (typeof val1 === "number" && typeof val2 === "number")
+            return val1 + val2;
+        if (typeof val1 === "string" && typeof val2 === "string")
+            return `${val1}|${val2}`;
+        return val2;
+    };
 
-            if (typeof val1 === "number" && typeof val2 === "number") {
-                res[key] = val1 + val2;
-            } else if (typeof val2 === "string" && typeof val1 === "string") {
-                res[key] = val1 + "|" + val2;
-            } else {
-                res[key] = val2;
-            }
-        } else {
-            res[key] = obj2[key];
-        }
+    for (const key in obj2) {
+        const val1 = res[key];
+        const val2 = obj2[key];
+
+        res[key] = key in res ? mergeValues(val1, val2) : val2;
     }
 
     return res;
